@@ -1,0 +1,4 @@
+*.sh text eol=lf
+loop/hooks/pre-* text eol=lf
+.agents/skills/pi-native-contribuir/scripts/hooks/pre-* text eol=lf
+.claude/skills/pi-native-contribuir/scripts/hooks/pre-* text eol=lf

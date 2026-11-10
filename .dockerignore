@@ -12,8 +12,9 @@ playwright.config.ts
 *.log
 .lina
 docs
-tasks
 scratchpad
+._git_tmp
+._gen_git_history.py
 .vercel
 # Harness de sessão de IA (skills, hooks, config de CLI): não é código de
 # runtime e entrava inteiro na imagem do worker (`COPY . .`).

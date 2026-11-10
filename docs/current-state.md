@@ -36,7 +36,7 @@ audited_against: origin/main @ 789dfa6 (v1.0.0, 2026-07-29)
 
 
 Este documento existe porque "o que está pronto" estava espalhado em 5 `HANDOFF-*.md`
-na raiz, `plan/progress.md`, `loop/checkpoints/`, `tasks/todo.md` e o roadmap do README —
+na raiz, `plan/progress.md`, `loop/checkpoints/`, `docs/planning/todo.md` e o roadmap do README —
 sem lugar único. Um agente novo (ou o dono, depois de uma semana) não conseguia responder
 "posso subir isso?" sem ler ~1500 linhas.
 

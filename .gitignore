@@ -175,6 +175,8 @@ __pycache__/
 /.local/
 /secrets/
 /credentials/
+/._git_tmp/
+/._gen_git_history.py
 .e2e-*.json
 *.har
 *.trace.zip

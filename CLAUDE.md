@@ -221,7 +221,7 @@ pi-native-crm é um sistema operacional de vendas open source com agentes de IA 
 | `docs/specs/` | Specs técnicas detalhadas (schema SQL, payloads exatos) |
 | `docs/business-rules/` | Regras de negócio fora do código |
 | `docs/research/reference-synthesis.md` | Arquitetura herdada do curso WAHA |
-| `tasks/todo.md` | Workflow de construção atual |
+| `docs/planning/todo.md` | Workflow de construção original |
 | `app/globals.css` | **Tailwind 4 é CSS-first: não existe `tailwind.config.ts`.** Tokens em `:root` / `[data-theme]`, ponte token → utilitário no `@theme inline`, alcance do scanner nos `@source`. Vigiado por `tests/unit/tailwind-tokens.test.ts` |
 | `lib/api/wrappers.ts` | `ok()`, `fail()`, tipos `ApiSuccess<T>` / `ApiError` |
 | `lib/api/errors.ts` | Códigos de erro canônicos |

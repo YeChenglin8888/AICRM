@@ -29,6 +29,8 @@ describe("repository hygiene", () => {
     ".local/settings.json",
     "secrets/provider.json",
     "credentials/key.json",
+    "._git_tmp/in.bin",
+    "._gen_git_history.py",
     ".env.local",
     ".env.e2e",
     ".auth/session.json",
@@ -81,12 +83,15 @@ describe("repository hygiene", () => {
     expect(files).toContain("docs/handoffs/RELATORIO-W1-GATILHOS.md");
     expect(files).not.toContain("playwright.acceptance.config.ts");
     expect(files).not.toContain("playwright.live.config.ts");
+    expect(files.filter((file) => file.startsWith("tasks/"))).toEqual([]);
+    expect(files).toContain("docs/planning/todo.md");
     expect(
       files.filter(
         (file) =>
-          /^(?:output|tmp|scratchpad|\.local|secrets|credentials|backups|\.qa-backups|\.auth)\//.test(
+            /^(?:output|tmp|scratchpad|\.local|secrets|credentials|backups|\.qa-backups|\.auth|\._git_tmp)\//.test(
             file,
           ) ||
+          file === "._gen_git_history.py" ||
           /(^|\/)node_modules(?:\/|$)/.test(file) ||
           (/(^|\/)\.env/.test(file) && !/\.example$/.test(file)) ||
           /\.(?:dump|har|trace\.zip)$/.test(file),

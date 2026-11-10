@@ -109,8 +109,8 @@ CRM 产品层通过自有接口调用运行内核；Pi 类型封装在适配层�
 准备 Node.js 22+、pnpm，以及开发用 Supabase 和 Redis 配置。
 
 ```bash
-git clone https://github.com/helsome/AiNativeCrm.git
-cd AiNativeCrm
+git clone https://github.com/YeChenglin8888/AICRM.git
+cd AICRM
 pnpm install --frozen-lockfile
 
 # 仅在配置文件不存在时创建，保留已有配置
@@ -178,17 +178,21 @@ node scripts/serve-agent-demo.mjs
 
 | 目录                  | 内容                                              |
 | --------------------- | ------------------------------------------------- |
-| `app/`、`components/` | CRM 页面、Agent 工作台与产品 API                  |
+| `app/`                | Next.js App Router，包含页面与 API                |
+| `components/`、`hooks/`、`public/` | 共用界面、React hooks 与静态资源 |
 | `lib/`                | CRM 领域逻辑、工具、Harness、知识记忆与服务适配器 |
-| `workers/`            | 后台 Agent 执行                                   |
+| `workers/`            | 后台 Agent 与事件处理                             |
 | `supabase/`           | 数据库基线、迁移与权限规则                        |
-| `infra/`              | 服务部署与接入配置                                |
+| `infra/`、`hostgator-setup-kit/` | 基础设施配置与自托管安装工具      |
+| `scripts/`            | 本地开发、运维和验证命令                          |
 | `tests/`              | 单元、数据库与浏览器测试                          |
 | `examples/`           | 演示场景与回放入口                                |
 | `docs/`               | 架构、规格、配置与验证记录                        |
 | `evidence/`           | 文档引用的验证证据                                |
 
-本地输出放在 `output/`、`tmp/` 或 `scratchpad/`，历史交接放在 `docs/handoffs/`。环境文件、真实凭据、客户数据和数据库备份不进入版本库。
+根目录保留框架配置、Docker Compose 入口和项目说明。治理工具及其状态位于 `loop/` 和 `plan/`，历史任务文档归档在 [docs/planning/](docs/planning/todo.md)，交接记录放在 `docs/handoffs/`。
+
+本地输出放在 `output/`、`tmp/` 或 `scratchpad/`。环境文件、真实凭据、客户数据和数据库备份不进入版本库。
 
 ## 文档
 
